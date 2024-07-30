@@ -1,0 +1,14 @@
+.compact-table {
+    font-size: 9px !important;
+  
+    th.mat-header-cell, td.mat-cell {
+      padding: 1px 4px !important;
+      line-height: 1.2 !important;
+    }
+  
+    mat-paginator {
+      margin-top: 5px;
+      font-size: 9px !important;
+    }
+  }
+  

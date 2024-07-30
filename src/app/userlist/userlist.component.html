@@ -1,0 +1,48 @@
+<div>
+  <h1>User Management</h1>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 demo-table compact-table">
+    <!-- Name Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let element">{{element.Name}}</td>
+    </ng-container>
+    
+    <!-- Sine Column -->
+    <ng-container matColumnDef="Sine">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Sine</th>
+      <td mat-cell *matCellDef="let element">{{element.Sine}}</td>
+    </ng-container>
+    
+    <!-- Country Column -->
+    <ng-container matColumnDef="Country">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Country</th>
+      <td mat-cell *matCellDef="let element">{{element.Country}}</td>
+    </ng-container>
+    
+    <!-- City Column -->
+    <ng-container matColumnDef="City">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>City</th>
+      <td mat-cell *matCellDef="let element">{{element.City}}</td>
+    </ng-container>
+    
+    <!-- Privileges Column -->
+    <ng-container matColumnDef="Privileges">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Privileges</th>
+      <td mat-cell *matCellDef="let element">{{element.Privileges}}</td>
+    </ng-container>
+    
+    <!-- Roles Column -->
+    <ng-container matColumnDef="Roles">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Roles</th>
+      <td mat-cell *matCellDef="let element">{{element.Roles}}</td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons aria-label="Select page of periodic elements"></mat-paginator>
+</div>
